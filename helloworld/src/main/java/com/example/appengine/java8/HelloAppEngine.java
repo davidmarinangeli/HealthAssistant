@@ -43,6 +43,8 @@ import java.util.List;
 // With @WebServlet annotation the webapp/WEB-INF/web.xml is no longer required.
 @WebServlet(name = "HelloAppEngine", value = "/assistant")
 public class HelloAppEngine extends AIWebhookServlet {
+
+    public static final String prontosoccorso = "prontosoccorso";
     public static int PRETTY_PRINT_INDENT_FACTOR = 4;
 
     protected void doWebhook(AIWebhookRequest aiWebhookRequest, Fulfillment fulfillment) {
