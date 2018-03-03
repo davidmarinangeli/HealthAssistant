@@ -43,20 +43,6 @@ import java.util.List;
 // With @WebServlet annotation the webapp/WEB-INF/web.xml is no longer required.
 @WebServlet(name = "HelloAppEngine", value = "/assistant")
 public class HelloAppEngine extends AIWebhookServlet {
-
-    public static final String prontosoccorso = "prontosoccorso";
-    public static final String showmenuaction = "showmenu";
-    // URLs
-    public static final String tgarURL = "http://ftp.tn.ymir.eu/tgar.jpg";
-    public static final String povocompletoURL = "http://ftp.tn.ymir.eu/Povo02.jpg";
-    public static final String mesiano2URL = "http://ftp.tn.ymir.eu/mesiano02.jpg";
-    public static final String mesiano1URL = "http://ftp.tn.ymir.eu/mesiano01.jpg";
-    public static final HashMap<String, String> webcamURLsList = new HashMap<String, String>() {{
-        put("Tommaso Gar", tgarURL);
-        put("Povo Completo", povocompletoURL);
-        put("Mesiano 1", mesiano1URL);
-        put("Mesiano 2", mesiano2URL);
-    }};
     public static int PRETTY_PRINT_INDENT_FACTOR = 4;
 
     protected void doWebhook(AIWebhookRequest aiWebhookRequest, Fulfillment fulfillment) {
@@ -103,9 +89,11 @@ public class HelloAppEngine extends AIWebhookServlet {
                         "Attesa codice bianco: " + statops.getSTATOPS().getPRONTOSOCCORSO().get(0).getATTESAMEDIA().getBIANCO() + " minuti "
                         +"Attesa codice giallo: " + statops.getSTATOPS().getPRONTOSOCCORSO().get(0).getATTESAMEDIA().getGIALLO() + " minuti "
                         +"Attesa codice verde: " + statops.getSTATOPS().getPRONTOSOCCORSO().get(0).getATTESAMEDIA().getVERDE() + " minuti "
-                        +"Attesa codice rosso: " + statops.getSTATOPS().getPRONTOSOCCORSO().get(0).getATTESAMEDIA().getROSSO() + " minuti");
+                        +"Attesa codice rosso: " + statops.getSTATOPS().getPRONTOSOCCORSO().get(0).getATTESAMEDIA()
+                        .getROSSO() + " minuti");
 
                 chat_bubble_simple.setTextToSpeech("Ecco lo stato dell'Ospedale di Trento");
+
                 itemList.add(chat_bubble_simple);
 
 
