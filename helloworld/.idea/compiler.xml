@@ -11,8 +11,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="helloworld" target="1.8" />
-      <module name="helloworld_main" target="1.8" />
-      <module name="helloworld_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

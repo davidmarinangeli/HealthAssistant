@@ -35,7 +35,7 @@ public class PRONTOSOCCORSO {
     private String uNITAOPERATIVA;
     @SerializedName("MESSAGGIO")
     @Expose
-    private MESSAGGIO mESSAGGIO;
+    private String mESSAGGIO;
 
     public AMBULATORIO getAMBULATORIO() {
         return aMBULATORIO;
@@ -154,15 +154,15 @@ public class PRONTOSOCCORSO {
         return this;
     }
 
-    public MESSAGGIO getMESSAGGIO() {
+    public String getMESSAGGIO() {
         return mESSAGGIO;
     }
 
-    public void setMESSAGGIO(MESSAGGIO mESSAGGIO) {
+    public void setMESSAGGIO(String mESSAGGIO) {
         this.mESSAGGIO = mESSAGGIO;
     }
 
-    public PRONTOSOCCORSO withMESSAGGIO(MESSAGGIO mESSAGGIO) {
+    public PRONTOSOCCORSO withMESSAGGIO(String mESSAGGIO) {
         this.mESSAGGIO = mESSAGGIO;
         return this;
     }
