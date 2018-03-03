@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="HealthAssistant:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/HealthAssistant_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="HealthAssistant/web/Web2" />
+      <element id="javaee-facet-resources" facet="HealthAssistant/web/Web" />
+    </root>
+  </artifact>
+</component>
